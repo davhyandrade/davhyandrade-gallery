@@ -1,4 +1,4 @@
-# Davhy Andrade | Galeria
+# Galeria
 
 Este é um projeto [Next.js](https://nextjs.org) criado com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  
 O projeto funciona como uma galeria pessoal, exibindo momentos fotografados por mim.
