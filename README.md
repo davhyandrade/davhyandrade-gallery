@@ -20,5 +20,5 @@ bun dev
 
 ## Requisitos
 
-- Node.js >= 20
-- npm >= 9 (ou yarn/pnpm compatível)
+- `Node.js >= 20`
+- `npm >= 9 (ou yarn/pnpm compatível)`
