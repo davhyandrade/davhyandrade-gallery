@@ -9,7 +9,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Davhy Andrade | Galeria",
+  title: "Galeria | Davhy Andrade",
   description:
     "Galeria pessoal de momentos fotografados por Davhy Andrade, uma coleção que registra o cotidiano sob uma perspectiva pessoal.",
 };
