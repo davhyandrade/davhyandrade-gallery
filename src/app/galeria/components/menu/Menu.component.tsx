@@ -27,8 +27,8 @@ function Menu() {
       <Button
         variant="text"
         color="info"
-        startIcon={from ? <WestRoundedIcon /> : null}
-        endIcon={from ? null : <EastRoundedIcon />}
+        startIcon={from ? <WestRoundedIcon data-testid="west-icon" /> : null}
+        endIcon={from ? null : <EastRoundedIcon data-testid="east-icon" />}
         disableRipple
         onClick={handleNavigate}
         sx={{ textTransform: "none", "&:hover": { bgcolor: "transparent" } }}
