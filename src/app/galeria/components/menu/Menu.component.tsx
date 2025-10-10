@@ -29,9 +29,7 @@ function Menu() {
         color="info"
         startIcon={from ? <WestRoundedIcon data-testid="west-icon" /> : null}
         endIcon={from ? null : <EastRoundedIcon data-testid="east-icon" />}
-        disableRipple
         onClick={handleNavigate}
-        sx={{ textTransform: "none", "&:hover": { bgcolor: "transparent" } }}
       >
         {from ? "Voltar" : "Ir"} para a página {from || "principal"}
       </Button>
