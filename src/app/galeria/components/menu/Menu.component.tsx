@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from 'next/navigation';
 
-import { Box, Button } from "@mui/material";
-import EastRoundedIcon from "@mui/icons-material/EastRounded";
-import WestRoundedIcon from "@mui/icons-material/WestRounded";
+import { Box, Button } from '@mui/material';
+import EastRoundedIcon from '@mui/icons-material/EastRounded';
+import WestRoundedIcon from '@mui/icons-material/WestRounded';
 
-import { MAIN_URL_BASE } from "@/shared/constants";
+import { MAIN_URL_BASE } from '@/shared/constants';
 
 function Menu() {
   const { push, back } = useRouter();
   const searchParams = useSearchParams();
-  const from = searchParams.get("from");
+  const from = searchParams.get('from');
 
   const handleNavigate = () => {
     if (from) {
@@ -31,7 +31,8 @@ function Menu() {
         endIcon={from ? null : <EastRoundedIcon data-testid="east-icon" />}
         onClick={handleNavigate}
       >
-        {from ? "Voltar" : "Ir"} para a página {from || "principal"}
+        {from ? 'Voltar' : 'Ir'} para a página{' '}
+        {from || 'principal'}
       </Button>
     </Box>
   );
