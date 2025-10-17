@@ -1,7 +1,7 @@
 export const MuiButton = {
   styleOverrides: {
     root: {
-      textTransform: "none",
+      textTransform: 'none',
       fontSize: 14,
       fontWeight: 600,
       borderRadius: 12,
@@ -10,19 +10,19 @@ export const MuiButton = {
       paddingBottom: 12,
       paddingLeft: 32,
       paddingRight: 32,
-      boxShadow: "none",
+      boxShadow: 'none',
 
-      "&:hover": {
-        boxShadow: "none",
+      '&:hover': {
+        boxShadow: 'none',
       },
 
-      "& .MuiButton-icon svg": {
+      '& .MuiButton-icon svg': {
         fontSize: 18,
       },
 
       variants: [
         {
-          props: { variant: "text" },
+          props: { variant: 'text' },
           style: {
             fontSize: 16,
             fontWeight: 400,
@@ -30,7 +30,7 @@ export const MuiButton = {
             paddingLeft: 8,
             paddingRight: 8,
             borderRadius: 4,
-            verticalAlign: "baseline",
+            verticalAlign: 'baseline',
           },
         },
       ],

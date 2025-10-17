@@ -1,13 +1,13 @@
-import { Box, Dialog, IconButton, Stack } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import { Box, Dialog, IconButton, Stack } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
-import { FullImageModalProps } from "./FullImageModal.types";
+import { FullImageModalProps } from './FullImageModal.types';
 
 function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
   const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   if (!src) return null;
 
@@ -18,12 +18,12 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
       slotProps={{
         backdrop: {
           sx: {
-            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
           },
         },
         paper: {
           sx: {
-            backgroundColor: "transparent",
+            backgroundColor: 'transparent',
             borderRadius: 0,
           },
         },
@@ -35,12 +35,12 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
         color="info"
         onClick={onClose}
         sx={{
-          position: "fixed",
+          position: 'fixed',
           top: { xs: 16, sm: 64 },
           right: { xs: 16, sm: 64 },
-          bgcolor: "#fff",
-          "&:hover": {
-            bgcolor: "#f0f0f0",
+          bgcolor: '#fff',
+          '&:hover': {
+            bgcolor: '#f0f0f0',
           },
         }}
       >
@@ -58,10 +58,10 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
           component="img"
           src={src}
           sx={{
-            width: "auto",
-            maxWidth: "100%",
-            maxHeight: "90dvh",
-            objectFit: "contain",
+            width: 'auto',
+            maxWidth: '100%',
+            maxHeight: '90dvh',
+            objectFit: 'contain',
           }}
         />
       </Stack>
