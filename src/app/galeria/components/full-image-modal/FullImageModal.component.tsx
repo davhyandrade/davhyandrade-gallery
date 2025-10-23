@@ -13,6 +13,7 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
 
   return (
     <Dialog
+      data-testid="full-image-modal"
       open={isOpen}
       onClose={onClose}
       slotProps={{
@@ -32,6 +33,7 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
       fullScreen={fullScreen}
     >
       <IconButton
+        data-testid="close-button"
         color="info"
         onClick={onClose}
         sx={{
@@ -54,7 +56,8 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
         height="100%"
         padding={{ xs: 4, sm: 0 }}
       >
-        <Box
+        <Box  
+          data-testid="full-image"
           component="img"
           src={src}
           sx={{
