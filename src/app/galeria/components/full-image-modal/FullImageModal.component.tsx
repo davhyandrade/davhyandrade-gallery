@@ -36,8 +36,8 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
         onClick={onClose}
         sx={{
           position: 'fixed',
-          top: { xs: 16, sm: 64 },
-          right: { xs: 16, sm: 64 },
+          top: { xs: 16, sm: 24 },
+          right: { xs: 16, sm: 24 },
           bgcolor: '#fff',
           '&:hover': {
             bgcolor: '#f0f0f0',
