@@ -1,5 +1,14 @@
-function GalleryPage() {
-  return <h1>Hello world</h1>;
-}
+import { Box, Stack } from '@mui/material';
 
-export default GalleryPage;
+import ImageGallery from './components/image-gallery/ImageGallery.component';
+import { initialImages } from './gallery.config';
+
+export default function GalleryPage() {
+  return (
+    <Stack width="100%" direction="row" justifyContent="center">
+      <Box maxWidth={1600}>
+        <ImageGallery images={initialImages} />
+      </Box>
+    </Stack>
+  );
+}
