@@ -1,5 +1,7 @@
-import { Box, ButtonBase, Stack, Typography } from '@mui/material';
+import { ButtonBase, Stack, Typography } from '@mui/material';
 import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { ImageGalleryItemProps } from './ImageGalleryItem.types';
 
@@ -16,17 +18,13 @@ function ImageGalleryItem({ image, ...restProps }: ImageGalleryItemProps) {
       }}
       {...restProps}
     >
-      <Box
-        component="img"
+      <LazyLoadImage
         src={image.src}
         alt={image.alt}
-        loading="lazy"
-        sx={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          display: 'block',
-        }}
+        effect="blur"
+        width="100%"
+        height="100%"
+        style={{ objectFit: 'cover', display: 'block' }}
       />
 
       <Stack
