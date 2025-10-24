@@ -31,6 +31,12 @@ const eslintConfig = [
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
       'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
       'no-underscore-dangle': 'off',
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: ['../*'],
+        },
+      ],
       'react/function-component-definition': [
         'error',
         {
@@ -54,6 +60,12 @@ const eslintConfig = [
     files: ['**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx'],
     rules: {
       'no-underscore-dangle': 'error',
+    },
+  },
+  {
+    files: ['**/*.test.*'],
+    rules: {
+      'no-restricted-imports': 'off',
     },
   },
 ];

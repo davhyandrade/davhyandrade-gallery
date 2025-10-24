@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Box } from '@mui/material';
 
-import FullImageModal from '../full-image-modal/FullImageModal.component';
+import FullImageModal from '@/app/galeria/components/full-image-modal/FullImageModal.component';
 import ImageGalleryItem from './image-gallery-item/ImageGalleryItem.component';
 
 import { ImageGalleryProps } from './ImageGallery.types';
