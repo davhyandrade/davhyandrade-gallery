@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
-import { FullImageModalProps } from './FullImageModal.types';
+import type { FullImageModalProps } from './FullImageModal.types';
 
 function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
   const theme = useTheme();
@@ -56,7 +56,7 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
         height="100%"
         padding={{ xs: 4, sm: 0 }}
       >
-        <Box  
+        <Box
           data-testid="full-image"
           component="img"
           src={src}
