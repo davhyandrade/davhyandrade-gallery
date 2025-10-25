@@ -1,37 +1,16 @@
-'use client';
-
-import Typed from 'typed.js';
-
-import { useEffect, useRef } from 'react';
-import { Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
 function Loading() {
-  const typedRef = useRef<HTMLSpanElement | null>(null);
-
-  useEffect(() => {
-    const typed = new Typed(typedRef.current, {
-      strings: ['...'],
-      startDelay: 150,
-      typeSpeed: 300,
-      backSpeed: 300,
-      backDelay: 150,
-      loop: true,
-      showCursor: false,
-    });
-
-    return () => typed.destroy();
-  }, []);
-
   return (
     <Stack
       alignItems="center"
       justifyContent="center"
       width="100%"
-      height="100%"
+      height="100dvh"
     >
-      <Typography
-        variant="caption"
-        color="gray.main"
+      <Stack
+        direction="row"
+        alignItems="center"
         sx={{
           userSelect: 'none',
           animation: 'verticalGradient 2s ease-in-out infinite',
@@ -42,9 +21,36 @@ function Loading() {
           },
         }}
       >
-        Carregando
-        <span ref={typedRef} />
-      </Typography>
+        <Typography variant="body2" color="gray.main">
+          Carregando
+        </Typography>
+
+        <Box
+          sx={{
+            display: 'flex',
+            gap: 0.2,
+            '& > div': {
+              width: 4,
+              height: 4,
+              borderRadius: '50%',
+              bgcolor: 'gray.main',
+              animation: 'dotFlashing 1.4s infinite linear',
+            },
+            '& > div:nth-of-type(1)': { animationDelay: '0s' },
+            '& > div:nth-of-type(2)': { animationDelay: '0.3s' },
+            '& > div:nth-of-type(3)': { animationDelay: '0.6s' },
+            '@keyframes dotFlashing': {
+              '0%': { opacity: 0.2 },
+              '20%': { opacity: 1 },
+              '100%': { opacity: 0.2 },
+            },
+          }}
+        >
+          <Box />
+          <Box />
+          <Box />
+        </Box>
+      </Stack>
     </Stack>
   );
 }
