@@ -31,6 +31,12 @@ const eslintConfig = [
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
       'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
       'no-underscore-dangle': 'off',
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          prefer: 'type-imports',
+        },
+      ],
       'no-restricted-imports': [
         'error',
         {
