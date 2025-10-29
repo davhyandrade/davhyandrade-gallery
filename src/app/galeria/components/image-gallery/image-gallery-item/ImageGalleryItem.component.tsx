@@ -3,7 +3,7 @@ import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import { ImageGalleryItemProps } from './ImageGalleryItem.types';
+import type { ImageGalleryItemProps } from './ImageGalleryItem.types';
 
 function ImageGalleryItem({ image, ...restProps }: ImageGalleryItemProps) {
   return (

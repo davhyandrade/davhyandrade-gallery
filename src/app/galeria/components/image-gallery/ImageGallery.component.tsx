@@ -6,7 +6,7 @@ import { Box } from '@mui/material';
 import FullImageModal from '@/app/galeria/components/full-image-modal/FullImageModal.component';
 import ImageGalleryItem from './image-gallery-item/ImageGalleryItem.component';
 
-import { ImageGalleryProps } from './ImageGallery.types';
+import type { ImageGalleryProps } from './ImageGallery.types';
 
 function ImageGallery({ images }: ImageGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
