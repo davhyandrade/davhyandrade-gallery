@@ -11,6 +11,8 @@ import { ImageGalleryProps } from './ImageGallery.types';
 function ImageGallery({ images }: ImageGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  if (!images) return null;
+
   return (
     <>
       <Box
