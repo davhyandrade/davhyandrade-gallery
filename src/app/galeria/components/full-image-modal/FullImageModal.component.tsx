@@ -5,11 +5,11 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 import type { FullImageModalProps } from './FullImageModal.types';
 
-function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
+function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-  if (!src) return null;
+  if (!images) return null;
 
   return (
     <Dialog
@@ -59,7 +59,7 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
         <Box
           data-testid="full-image"
           component="img"
-          src={src}
+          src={images[0].src}
           sx={{
             width: 'auto',
             maxWidth: '100%',

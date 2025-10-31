@@ -5,5 +5,5 @@ export type Image = {
 };
 
 export interface ImageGalleryProps {
-  images: Image[] | null;
+  images: Image[][] | null;
 }
