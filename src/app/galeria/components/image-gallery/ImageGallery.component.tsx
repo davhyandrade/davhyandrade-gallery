@@ -6,10 +6,10 @@ import { Box } from '@mui/material';
 import FullImageModal from '@/app/galeria/components/full-image-modal/FullImageModal.component';
 import ImageGalleryItem from './image-gallery-item/ImageGalleryItem.component';
 
-import type { ImageGalleryProps } from './ImageGallery.types';
+import type { Image, ImageGalleryProps } from './ImageGallery.types';
 
 function ImageGallery({ images }: ImageGalleryProps) {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImages, setSelectedImages] = useState<Image[] | null>(null);
 
   if (!images) return null;
 
@@ -25,24 +25,25 @@ function ImageGallery({ images }: ImageGalleryProps) {
       >
         {images.map(img => (
           <Box
-            key={img.id}
+            key={img[0].id}
             sx={{
               marginBottom: 1,
               breakInside: 'avoid',
             }}
           >
             <ImageGalleryItem
-              image={img}
-              onClick={() => setSelectedImage(img.src)}
+              image={img[0]}
+              hasMultipleImages={img.length > 1}
+              onClick={() => setSelectedImages(img)}
             />
           </Box>
         ))}
       </Box>
 
       <FullImageModal
-        isOpen={!!selectedImage}
-        onClose={() => setSelectedImage(null)}
-        src={selectedImage}
+        isOpen={!!selectedImages}
+        onClose={() => setSelectedImages(null)}
+        images={selectedImages}
       />
     </>
   );

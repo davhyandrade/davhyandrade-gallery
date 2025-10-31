@@ -3,4 +3,5 @@ import type { Image } from '@/app/galeria/components/image-gallery/ImageGallery.
 
 export interface ImageGalleryItemProps extends ButtonBaseProps {
   image: Image;
+  hasMultipleImages?: boolean;
 }
