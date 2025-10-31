@@ -22,7 +22,7 @@ function ImageGalleryItem({ image, ...restProps }: ImageGalleryItemProps) {
         overflow: 'hidden',
         borderRadius: 2,
         bgcolor: 'gray.light',
-        ...(!loaded && { minHeight: 500 }),
+        ...(!loaded && { minHeight: { xs: 280, sm: 500 } }),
       }}
       {...restProps}
     >
