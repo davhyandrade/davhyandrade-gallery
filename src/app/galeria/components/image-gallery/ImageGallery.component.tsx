@@ -18,7 +18,7 @@ function ImageGallery({ images }: ImageGalleryProps) {
       <Box
         sx={{
           width: '100%',
-          padding: 4,
+          padding: { xs: 2, sm: 4 },
           columnCount: { xs: 2, sm: 3, lg: 4 },
           columnGap: 1,
         }}

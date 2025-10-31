@@ -54,7 +54,7 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
         alignItems="center"
         justifyContent="center"
         height="100%"
-        padding={{ xs: 4, sm: 0 }}
+        padding={{ xs: 2, sm: 0 }}
       >
         <Box
           data-testid="full-image"
