@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import Providers from './providers';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import './globals.css';
 
 const openSans = Open_Sans({

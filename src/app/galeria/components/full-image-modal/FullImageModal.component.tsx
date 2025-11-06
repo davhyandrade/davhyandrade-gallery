@@ -1,15 +1,30 @@
+import { useRef } from 'react';
+
 import { Box, Dialog, IconButton, Stack } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
+import SwiperSlide from '@/shared/components/swiper-slide/SwiperSlide.styles';
+import Swiper from '@/shared/components/swiper/Swiper.styles';
+
+import {
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Zoom,
+  Navigation,
+} from 'swiper/modules';
+
 import type { FullImageModalProps } from './FullImageModal.types';
+import NavigationButtons from './navigation-buttons/NavigationButtons.component';
 
-function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down('sm'));
 
-  if (!src) return null;
+  const prevButtonRef = useRef<HTMLButtonElement | null>(null);
+  const nextButtonRef = useRef<HTMLButtonElement | null>(null);
+
+  if (!images) return null;
 
   return (
     <Dialog
@@ -26,11 +41,12 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
           sx: {
             backgroundColor: 'transparent',
             borderRadius: 0,
+            boxShadow: 'none',
           },
         },
       }}
       maxWidth={false}
-      fullScreen={fullScreen}
+      fullScreen={isMobile}
     >
       <IconButton
         data-testid="close-button"
@@ -40,9 +56,10 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
           position: 'fixed',
           top: { xs: 16, sm: 24 },
           right: { xs: 16, sm: 24 },
-          bgcolor: '#fff',
+          bgcolor: 'white.main',
+          zIndex: 999,
           '&:hover': {
-            bgcolor: '#f0f0f0',
+            bgcolor: 'gray.light',
           },
         }}
       >
@@ -56,17 +73,52 @@ function FullImageModal({ isOpen, onClose, src }: FullImageModalProps) {
         height="100%"
         padding={{ xs: 2, sm: 0 }}
       >
-        <Box
-          data-testid="full-image"
-          component="img"
-          src={src}
-          sx={{
-            width: 'auto',
-            maxWidth: '100%',
-            maxHeight: '90dvh',
-            objectFit: 'contain',
+        <Swiper
+          pagination
+          mousewheel
+          keyboard
+          loop
+          zoom
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, Zoom]}
+          onBeforeInit={swiper => {
+            if (typeof swiper.params.navigation === 'object') {
+              Object.assign(swiper.params.navigation, {
+                prevEl: prevButtonRef.current,
+                nextEl: nextButtonRef.current,
+              });
+            }
           }}
-        />
+        >
+          {images.map(image => (
+            <SwiperSlide
+              key={image.id}
+              onClick={event => {
+                if (event.target === event.currentTarget) onClose();
+              }}
+            >
+              <Box className="swiper-zoom-container">
+                <Box
+                  data-testid="full-image"
+                  component="img"
+                  src={image.src}
+                  sx={{
+                    width: 'auto',
+                    maxWidth: '100%',
+                    maxHeight: '90dvh',
+                    objectFit: 'contain',
+                  }}
+                />
+              </Box>
+            </SwiperSlide>
+          ))}
+
+          {images.length > 1 && (
+            <NavigationButtons
+              prevRef={prevButtonRef}
+              nextRef={nextButtonRef}
+            />
+          )}
+        </Swiper>
       </Stack>
     </Dialog>
   );
