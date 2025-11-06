@@ -4,12 +4,17 @@ import { useState } from 'react';
 
 import { ButtonBase, Stack, Typography } from '@mui/material';
 import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
+import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import type { ImageGalleryItemProps } from './ImageGalleryItem.types';
 
-function ImageGalleryItem({ image, ...restProps }: ImageGalleryItemProps) {
+function ImageGalleryItem({
+  image,
+  hasMultipleImages = false,
+  ...restProps
+}: ImageGalleryItemProps) {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -37,24 +42,46 @@ function ImageGalleryItem({ image, ...restProps }: ImageGalleryItemProps) {
       />
 
       {loaded && (
-        <Stack
-          alignItems="center"
-          justifyContent="center"
-          sx={{
-            position: 'absolute',
-            inset: 0,
-            bgcolor: 'rgba(255, 255, 255, 0.5)',
-            opacity: 0,
-            transition: 'opacity 0.3s ease',
-            '&:hover': { opacity: 1 },
-          }}
-        >
-          <OpenInFullRoundedIcon color="info" />
+        <>
+          <Stack
+            alignItems="center"
+            justifyContent="center"
+            sx={{
+              position: 'absolute',
+              inset: 0,
+              bgcolor: 'rgba(255, 255, 255, 0.5)',
+              opacity: 0,
+              transition: 'opacity 0.3s ease',
+              '&:hover': {
+                opacity: 1,
+                '& ~ svg': {
+                  color: 'info.main',
+                  transition: 'color 0.3s ease',
+                },
+              },
+            }}
+          >
+            <OpenInFullRoundedIcon color="info" />
 
-          <Typography variant="body2" color="info.main" fontWeight={500}>
-            Abrir
-          </Typography>
-        </Stack>
+            <Typography variant="body2" color="info.main" fontWeight={500}>
+              Abrir
+            </Typography>
+          </Stack>
+
+          {hasMultipleImages && (
+            <PhotoLibraryIcon
+              data-testid="multiple-images-icon"
+              fontSize="small"
+              sx={{
+                color: 'white.main',
+                position: 'absolute',
+                top: 12,
+                right: 12,
+                zIndex: 100,
+              }}
+            />
+          )}
+        </>
       )}
     </ButtonBase>
   );
