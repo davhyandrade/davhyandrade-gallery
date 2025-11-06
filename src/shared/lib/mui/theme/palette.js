@@ -13,8 +13,11 @@ const palette = {
   },
   gray: {
     main: '#686868',
-    light: '#e4e3e3',
+    light: '#f0f0f0',
     dark: '#444444',
+  },
+  white: {
+    main: '#ffffff',
   },
 };
 
