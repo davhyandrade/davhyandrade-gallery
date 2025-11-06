@@ -1,6 +1,27 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import ImageGallery from '../ImageGallery.component';
 
+jest.mock('@mui/material/useMediaQuery', () =>
+  jest.fn().mockReturnValue(false),
+);
+
+jest.mock('swiper/react', () => ({
+  Swiper: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
+  SwiperSlide: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
+}));
+
+jest.mock('swiper/modules', () => ({
+  Pagination: {},
+  Mousewheel: {},
+  Keyboard: {},
+  Zoom: {},
+  Navigation: {},
+}));
+
 const mockImages = [
   [{ id: '1', src: 'https://example.com/img1.jpg', alt: 'test' }],
   [{ id: '2', src: 'https://example.com/img2.jpg', alt: 'test' }],
