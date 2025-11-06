@@ -25,15 +25,15 @@ function ImageGallery({ images }: ImageGalleryProps) {
       >
         {images.map(img => (
           <Box
-            key={img.id}
+            key={img[0].id}
             sx={{
               marginBottom: 1,
               breakInside: 'avoid',
             }}
           >
             <ImageGalleryItem
-              image={img}
-              onClick={() => setSelectedImage(img.src)}
+              image={img[0]}
+              onClick={() => setSelectedImage(img[0].src)}
             />
           </Box>
         ))}
