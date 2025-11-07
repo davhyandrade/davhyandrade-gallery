@@ -75,7 +75,6 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
         alignItems="center"
         justifyContent="center"
         height="100%"
-        padding={{ xs: 2, sm: 0 }}
         onClick={handleBackdropClick}
       >
         <Swiper
