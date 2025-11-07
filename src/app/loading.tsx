@@ -2,8 +2,8 @@ import { Box, Stack, Typography } from '@mui/material';
 
 function Loading() {
   const dotSx = {
-    width: 4,
-    height: 4,
+    width: 3,
+    height: 3,
     borderRadius: '50%',
     bgcolor: 'currentColor',
     opacity: 0,
