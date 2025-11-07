@@ -23,7 +23,7 @@ function Menu() {
   };
 
   return (
-    <Box component="header" py={4} px={6}>
+    <Box component="header" padding={{ xs: 2, sm: 4 }}>
       <Button
         variant="text"
         color="info"
@@ -31,8 +31,7 @@ function Menu() {
         endIcon={from ? null : <EastRoundedIcon data-testid="east-icon" />}
         onClick={handleNavigate}
       >
-        {from ? 'Voltar' : 'Ir'} para a página{' '}
-        {from || 'principal'}
+        {from ? 'Voltar' : 'Ir'} para a página {from || 'principal'}
       </Button>
     </Box>
   );
