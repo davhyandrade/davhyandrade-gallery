@@ -24,6 +24,10 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
   const prevButtonRef = useRef<HTMLButtonElement | null>(null);
   const nextButtonRef = useRef<HTMLButtonElement | null>(null);
 
+  const handleBackdropClick = (event: React.MouseEvent<HTMLElement>) => {
+    if (event.target === event.currentTarget) onClose();
+  };
+
   if (!images) return null;
 
   return (
@@ -72,6 +76,7 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
         justifyContent="center"
         height="100%"
         padding={{ xs: 2, sm: 0 }}
+        onClick={handleBackdropClick}
       >
         <Swiper
           pagination
@@ -90,12 +95,7 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
           }}
         >
           {images.map(image => (
-            <SwiperSlide
-              key={image.id}
-              onClick={event => {
-                if (event.target === event.currentTarget) onClose();
-              }}
-            >
+            <SwiperSlide key={image.id} onClick={handleBackdropClick}>
               <Box className="swiper-zoom-container">
                 <Box
                   data-testid="full-image"
