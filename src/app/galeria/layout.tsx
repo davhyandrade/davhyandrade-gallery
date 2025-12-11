@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import Menu from './components/menu/Menu.component';
+import Menu from './_components/menu/Menu.component';
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
