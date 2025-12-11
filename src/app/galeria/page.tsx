@@ -1,7 +1,7 @@
 import { Box, Stack } from '@mui/material';
 import { getImages } from '@/shared/services/getImages';
 
-import ImageGallery from './components/image-gallery/ImageGallery.component';
+import ImageGallery from './_components/image-gallery/ImageGallery.component';
 
 async function GalleryPage() {
   const images = await getImages();
