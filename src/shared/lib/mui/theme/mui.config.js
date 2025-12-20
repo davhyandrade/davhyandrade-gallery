@@ -6,6 +6,10 @@ import palette from './palette';
 
 const theme = createTheme({
   palette,
+  colorSchemes: {
+    dark: {},
+    light: {},
+  },
   typography,
   spacing: 4,
   components: {
