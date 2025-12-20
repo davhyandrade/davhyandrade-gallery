@@ -13,6 +13,10 @@ jest.mock('next/navigation', () => ({
   }),
 }));
 
+global.matchMedia = jest.fn().mockReturnValue({
+  matches: true,
+});
+
 describe('without "from" parameter', () => {
   beforeEach(() => {
     from = null;
