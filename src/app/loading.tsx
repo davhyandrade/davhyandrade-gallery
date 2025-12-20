@@ -27,9 +27,9 @@ function Loading() {
           userSelect: 'none',
           animation: 'verticalGradient 3s infinite ease-in-out',
           '@keyframes verticalGradient': {
-            '0%': { color: 'gray.main' },
+            '0%': { color: 'text.primary' },
             '20%': { color: 'primary.main' },
-            '100%': { color: 'gray.main' },
+            '100%': { color: 'text.primary' },
           },
         }}
       >
