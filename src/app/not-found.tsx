@@ -8,12 +8,14 @@ function NotFoundPage() {
       alignItems="center"
       justifyContent="center"
     >
-      <Stack alignItems="center" color="info.main" padding={2}>
-        <Typography variant="h1">404</Typography>
+      <Stack alignItems="center" padding={2}>
+        <Typography variant="h1" color="text.primary">
+          404
+        </Typography>
 
         <Typography
           variant="body1"
-          color="info.main"
+          color="text.primary"
           textAlign="center"
           fontWeight={600}
         >
@@ -22,7 +24,7 @@ function NotFoundPage() {
 
         <Typography
           variant="body2"
-          color="info.main"
+          color="text.secondary"
           maxWidth={300}
           textAlign="center"
           mt={2}
