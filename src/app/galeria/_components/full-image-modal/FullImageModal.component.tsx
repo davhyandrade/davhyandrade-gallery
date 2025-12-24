@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 
 import { Box, Dialog, IconButton, Stack } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
@@ -37,13 +38,13 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
       onClose={onClose}
       slotProps={{
         backdrop: {
-          sx: {
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-          },
+          sx: theme => ({
+            backgroundColor: alpha(theme.palette.background.paper, 0.8),
+          }),
         },
         paper: {
           sx: {
-            backgroundColor: 'transparent',
+            background: 'transparent',
             borderRadius: 0,
             boxShadow: 'none',
           },
@@ -54,16 +55,16 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
     >
       <IconButton
         data-testid="close-button"
-        color="info"
+        color="textAction"
         onClick={onClose}
         sx={{
           position: 'fixed',
           top: { xs: 16, sm: 24 },
           right: { xs: 16, sm: 24 },
-          bgcolor: 'white.main',
+          bgcolor: theme => alpha(theme.palette.background.paper, 0.9),
           zIndex: 999,
           '&:hover': {
-            bgcolor: 'gray.light',
+            bgcolor: 'background.paper',
           },
         }}
       >
@@ -95,7 +96,7 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
         >
           {images.map(image => (
             <SwiperSlide key={image.id} onClick={handleBackdropClick}>
-              <Box className="swiper-zoom-container">
+              <Stack className="swiper-zoom-container">
                 <Box
                   data-testid="full-image"
                   component="img"
@@ -107,7 +108,7 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
                     objectFit: 'contain',
                   }}
                 />
-              </Box>
+              </Stack>
             </SwiperSlide>
           ))}
 

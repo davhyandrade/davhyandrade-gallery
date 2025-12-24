@@ -3,7 +3,7 @@ import { Swiper as SwiperBase } from 'swiper/react';
 
 const Swiper = styled(SwiperBase)(({ theme }) => ({
   '.swiper-button-next, .swiper-button-prev': {
-    color: theme.palette.info.main,
+    color: theme.palette.text.primary,
     width: 32,
     height: 32,
   },
@@ -11,7 +11,7 @@ const Swiper = styled(SwiperBase)(({ theme }) => ({
     position: 'fixed',
   },
   '.swiper-pagination-bullet': {
-    background: theme.palette.info.main,
+    background: theme.palette.text.primary,
     opacity: 0.6,
   },
   '.swiper-pagination-bullet-active': {
