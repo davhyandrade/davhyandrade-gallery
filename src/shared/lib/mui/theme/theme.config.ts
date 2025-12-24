@@ -1,14 +1,17 @@
 import { createTheme } from '@mui/material/styles';
 
-import { MuiButton } from './components/button.config';
+import { MuiButton } from './components/button/button.config';
 import typography from './typography.config';
-import palette from './palette.config';
+import { darkPalette, lightPalette } from './palette/palette.config';
 
 const theme = createTheme({
-  palette,
   colorSchemes: {
-    dark: {},
-    light: {},
+    dark: {
+      palette: darkPalette,
+    },
+    light: {
+      palette: lightPalette,
+    },
   },
   typography,
   spacing: 4,
