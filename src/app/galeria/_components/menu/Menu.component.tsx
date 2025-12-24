@@ -29,7 +29,7 @@ function Menu() {
       <Stack direction="row" justifyContent="space-between" gap={2}>
         <Button
           variant="text"
-          color="info"
+          color="textAction"
           startIcon={from ? <WestRoundedIcon data-testid="west-icon" /> : null}
           endIcon={from ? null : <EastRoundedIcon data-testid="east-icon" />}
           onClick={handleNavigate}
