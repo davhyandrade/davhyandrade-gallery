@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import { ButtonBase, Stack, Typography } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 
@@ -26,7 +27,7 @@ function ImageGalleryItem({
         height: '100%',
         overflow: 'hidden',
         borderRadius: 2,
-        bgcolor: 'gray.light',
+        bgcolor: 'background.paper',
         ...(!loaded && { minHeight: { xs: 280, sm: 500 } }),
       }}
       {...restProps}
@@ -49,21 +50,21 @@ function ImageGalleryItem({
             sx={{
               position: 'absolute',
               inset: 0,
-              bgcolor: 'rgba(255, 255, 255, 0.5)',
+              bgcolor: theme => alpha(theme.palette.background.paper, 0.8),
               opacity: 0,
               transition: 'opacity 0.3s ease',
               '&:hover': {
                 opacity: 1,
                 '& ~ svg': {
-                  color: 'info.main',
+                  color: 'text.primary',
                   transition: 'color 0.3s ease',
                 },
               },
             }}
           >
-            <OpenInFullRoundedIcon color="info" />
+            <OpenInFullRoundedIcon color="secondary" />
 
-            <Typography variant="body2" color="info.main" fontWeight={500}>
+            <Typography variant="body2" color="text.primary" fontWeight={500}>
               Abrir
             </Typography>
           </Stack>
@@ -73,7 +74,7 @@ function ImageGalleryItem({
               data-testid="multiple-images-icon"
               fontSize="small"
               sx={{
-                color: 'white.main',
+                color: 'common.white',
                 position: 'absolute',
                 top: 12,
                 right: 12,
