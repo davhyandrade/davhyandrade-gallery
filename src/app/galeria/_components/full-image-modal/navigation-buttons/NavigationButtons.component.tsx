@@ -1,4 +1,5 @@
-import { IconButton, useMediaQuery } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 
@@ -14,7 +15,7 @@ function NavigationButtons({ prevRef, nextRef }: NavigationButtonsProps) {
     <>
       <IconButton
         ref={prevRef}
-        color="info"
+        color="textAction"
         sx={{
           ...buttonSx,
           left: 24,
@@ -25,7 +26,7 @@ function NavigationButtons({ prevRef, nextRef }: NavigationButtonsProps) {
 
       <IconButton
         ref={nextRef}
-        color="info"
+        color="textAction"
         sx={{
           ...buttonSx,
           right: 24,
