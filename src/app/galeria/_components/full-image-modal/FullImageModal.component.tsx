@@ -7,6 +7,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 import SwiperSlide from '@/shared/components/swiper-slide/SwiperSlide.styles';
 import Swiper from '@/shared/components/swiper/Swiper.styles';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import {
   Pagination,
@@ -97,11 +98,11 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
           {images.map(image => (
             <SwiperSlide key={image.id} onClick={handleBackdropClick}>
               <Stack className="swiper-zoom-container">
-                <Box
+                <LazyLoadImage
                   data-testid="full-image"
-                  component="img"
                   src={image.src}
-                  sx={{
+                  effect="blur"
+                  style={{
                     width: 'auto',
                     maxWidth: '100%',
                     maxHeight: '90dvh',
