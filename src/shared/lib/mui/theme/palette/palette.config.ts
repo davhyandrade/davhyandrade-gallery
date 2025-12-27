@@ -2,6 +2,7 @@ import type {
   PaletteOptions,
   SimplePaletteColorOptions,
 } from '@mui/material/styles';
+
 import { orange } from '@mui/material/colors';
 
 const baseSecondary: SimplePaletteColorOptions = {
@@ -16,8 +17,9 @@ export const lightPalette: PaletteOptions = {
     default: '#ffffff',
   },
   text: {
-    primary: '#1f2937',
-    secondary: '#6b7280',
+    title: '#1f2937',
+    primary: '#6b7280',
+    secondary: '#9ca3af',
     disabled: '#d1d1d1ff',
   },
   textAction: {
@@ -27,13 +29,14 @@ export const lightPalette: PaletteOptions = {
   primary: {
     main: '#2494d6',
     dark: '#0068a6',
-    light: '#d2eeffff',
+    light: '#cae5ee80',
     contrastText: '#ffffff',
   },
   secondary: {
     ...baseSecondary,
     contrastText: '#ffffff',
   },
+  divider: '#e5e7eb',
 };
 
 export const darkPalette: PaletteOptions = {
@@ -52,6 +55,12 @@ export const darkPalette: PaletteOptions = {
   },
   secondary: {
     ...baseSecondary,
+    contrastText: '#242424',
+  },
+  primary: {
+    main: '#90caf9',
+    light: '#e3f2fd1c',
+    dark: '#42a5f5',
     contrastText: '#242424',
   },
 };
