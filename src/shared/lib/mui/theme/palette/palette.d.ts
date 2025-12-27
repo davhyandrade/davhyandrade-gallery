@@ -8,4 +8,8 @@ declare module '@mui/material/styles' {
   interface PaletteOptions {
     textAction?: PaletteOptions['primary'];
   }
+
+  interface TypeText {
+    title: string;
+  }
 }

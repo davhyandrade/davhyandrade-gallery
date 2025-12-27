@@ -33,6 +33,10 @@ export const MuiButton: Components<Theme>['MuiButton'] = {
             paddingRight: 8,
             borderRadius: 4,
             verticalAlign: 'baseline',
+
+            '&:hover': {
+              textDecoration: 'underline',
+            },
           },
         },
       ],
