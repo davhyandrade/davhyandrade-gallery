@@ -24,7 +24,8 @@ export const lightPalette: PaletteOptions = {
   },
   textAction: {
     main: '#1f2937',
-    contrastText: '#0a0909ff',
+    dark: '#2494d6',
+    contrastText: '#ffffff',
   },
   primary: {
     main: '#2494d6',
@@ -46,6 +47,7 @@ export const darkPalette: PaletteOptions = {
   },
   textAction: {
     main: '#e5e7eb',
+    dark: '#90caf9',
     contrastText: '#242424',
   },
   text: {
