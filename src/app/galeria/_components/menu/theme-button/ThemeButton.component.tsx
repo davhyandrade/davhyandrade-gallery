@@ -20,8 +20,8 @@ function ThemeButton() {
         data-testid="theme-button"
         onClick={handleClick}
         sx={{
-          border: 2,
-          borderColor: 'background.paper',
+          border: 1,
+          borderColor: 'divider',
           bgcolor: anchorEl ? 'background.paper' : 'transparent',
         }}
       >
