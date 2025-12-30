@@ -37,6 +37,8 @@ function ThemePopover({ anchorEl, onClose }: ThemePopoverProps) {
             mt: 2,
             boxShadow: 'none',
             borderRadius: 3,
+            border: 1,
+            borderColor: 'divider',
           },
         },
       }}

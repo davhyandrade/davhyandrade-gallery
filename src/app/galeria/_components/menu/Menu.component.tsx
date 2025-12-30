@@ -2,7 +2,9 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import { Box, Button, Stack } from '@mui/material';
+import Logotipo from '@/app/galeria/_components/logotipo/Logotipo.component';
+import { Box, Button, Divider, Stack } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
 import WestRoundedIcon from '@mui/icons-material/WestRounded';
 
@@ -15,6 +17,8 @@ function Menu() {
   const searchParams = useSearchParams();
   const from = searchParams.get('from');
 
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down('sm'));
+
   const handleNavigate = () => {
     if (from) {
       back();
@@ -25,17 +29,36 @@ function Menu() {
   };
 
   return (
-    <Box component="header" padding={{ xs: 2, sm: 4 }}>
+    <Box
+      component="header"
+      padding={{ xs: 2, sm: 4 }}
+      borderBottom={1}
+      borderColor="divider"
+    >
       <Stack direction="row" justifyContent="space-between" gap={2}>
-        <Button
-          variant="text"
-          color="textAction"
-          startIcon={from ? <WestRoundedIcon data-testid="west-icon" /> : null}
-          endIcon={from ? null : <EastRoundedIcon data-testid="east-icon" />}
-          onClick={handleNavigate}
-        >
-          {from ? 'Voltar' : 'Ir'} para a página {from || 'principal'}
-        </Button>
+        <Stack direction="row" alignItems="center" gap={4} flexWrap="wrap">
+          <Logotipo />
+
+          {!isMobile && (
+            <>
+              <Divider orientation="vertical" />
+
+              <Button
+                variant="text"
+                color="textAction"
+                startIcon={
+                  from ? <WestRoundedIcon data-testid="west-icon" /> : null
+                }
+                endIcon={
+                  from ? null : <EastRoundedIcon data-testid="east-icon" />
+                }
+                onClick={handleNavigate}
+              >
+                {from ? 'Voltar' : 'Ir'} para a página {from || 'principal'}
+              </Button>
+            </>
+          )}
+        </Stack>
 
         <ThemeButton />
       </Stack>

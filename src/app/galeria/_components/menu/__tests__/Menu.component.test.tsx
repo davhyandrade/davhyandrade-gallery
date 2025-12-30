@@ -1,6 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import Menu from '../Menu.component';
 
+jest.mock('@mui/material/useMediaQuery', () =>
+  jest.fn().mockReturnValue(false),
+);
+
 let from: string | null = null;
 
 jest.mock('next/navigation', () => ({
