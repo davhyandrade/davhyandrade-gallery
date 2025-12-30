@@ -26,9 +26,14 @@ function ImageGalleryItem({
         width: '100%',
         height: '100%',
         overflow: 'hidden',
-        borderRadius: 2,
+        borderRadius: 3,
         bgcolor: 'background.paper',
         ...(!loaded && { minHeight: { xs: 280, sm: 500 } }),
+
+        '&:hover img': {
+          transition: 'all 0.3s ease',
+          transform: 'scale(1.01)',
+        },
       }}
       {...restProps}
     >

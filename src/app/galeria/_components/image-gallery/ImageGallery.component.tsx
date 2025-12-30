@@ -16,18 +16,19 @@ function ImageGallery({ images }: ImageGalleryProps) {
   return (
     <>
       <Box
+        id="image-gallery"
         sx={{
           width: '100%',
           padding: { xs: 2, sm: 4 },
           columnCount: { xs: 2, sm: 3, lg: 4 },
-          columnGap: 1,
+          columnGap: { xs: 2, md: 6 },
         }}
       >
         {images.map(img => (
           <Box
             key={img[0].id}
             sx={{
-              marginBottom: 1,
+              marginBottom: { xs: 2, md: 6 },
               breakInside: 'avoid',
             }}
           >
