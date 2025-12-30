@@ -33,7 +33,7 @@ function Menu() {
       component="header"
       alignItems="center"
       justifyContent="center"
-      padding={{ xs: 2, sm: 4 }}
+      padding={4}
       borderBottom={1}
       borderColor="divider"
     >
@@ -74,7 +74,21 @@ function Menu() {
           )}
         </Stack>
 
-        <ThemeButton />
+        {!isMobile && (
+          <Stack flex={1} direction="row" justifyContent="center" spacing={2}>
+            <Button variant="text" color="textAction" href="#image-gallery">
+              Galeria
+            </Button>
+
+            <Button variant="text" color="textAction" href={MAIN_URL_BASE}>
+              Sobre
+            </Button>
+          </Stack>
+        )}
+
+        <Stack flex={1} direction="row" justifyContent="end">
+          <ThemeButton />
+        </Stack>
       </Stack>
     </Stack>
   );

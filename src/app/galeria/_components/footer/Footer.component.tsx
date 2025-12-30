@@ -21,20 +21,15 @@ function Footer() {
         width="100%"
         maxWidth="xl"
       >
-        <Stack flex={1} spacing={2}>
+        <Stack flex={1}>
           <Logotipo />
-
-          <Typography variant="body2" color="text.primary" maxWidth={400}>
-            Fotografias autorais da minha rotina, do jeito que eu vejo o mundo,
-            em cenários e lugares marcantes.
-          </Typography>
         </Stack>
 
         <Stack flex={1} direction="row" justifyContent="center">
           <Typography
             variant="caption"
             color="text.secondary"
-            textAlign="center"
+            textAlign={{ xs: 'start', sm: 'center' }}
           >
             © 2025 Galeria Davhy Andrade. Todos os direitos reservados.
           </Typography>
