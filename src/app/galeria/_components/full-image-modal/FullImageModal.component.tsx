@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import { Box, Dialog, IconButton, Stack } from '@mui/material';
+import { Dialog, IconButton, Stack } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';

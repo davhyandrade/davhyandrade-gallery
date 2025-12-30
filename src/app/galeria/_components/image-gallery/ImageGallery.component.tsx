@@ -20,7 +20,7 @@ function ImageGallery({ images }: ImageGalleryProps) {
         sx={{
           width: '100%',
           padding: { xs: 2, sm: 4 },
-          columnCount: { xs: 2, sm: 3, lg: 4 },
+          columnCount: { xs: 2, sm: 3 },
           columnGap: { xs: 2, md: 6 },
         }}
       >
