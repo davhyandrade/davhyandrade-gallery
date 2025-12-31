@@ -8,7 +8,7 @@ async function GalleryPage() {
 
   return (
     <Stack width="100%" direction="row" justifyContent="center">
-      <Box maxWidth={1750} width="100%" >
+      <Box maxWidth="xl" width="100%">
         <ImageGallery images={images} />
       </Box>
     </Stack>
