@@ -3,7 +3,7 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import Logotipo from '@/app/galeria/_components/logotipo/Logotipo.component';
-import { Box, Button, Divider, Stack } from '@mui/material';
+import { Button, Divider, Stack } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
 import WestRoundedIcon from '@mui/icons-material/WestRounded';
@@ -29,14 +29,28 @@ function Menu() {
   };
 
   return (
-    <Box
+    <Stack
       component="header"
+      alignItems="center"
+      justifyContent="center"
       padding={{ xs: 2, sm: 4 }}
       borderBottom={1}
       borderColor="divider"
     >
-      <Stack direction="row" justifyContent="space-between" gap={2}>
-        <Stack direction="row" alignItems="center" gap={4} flexWrap="wrap">
+      <Stack
+        direction="row"
+        width="100%"
+        justifyContent="space-between"
+        gap={2}
+        maxWidth="xl"
+      >
+        <Stack
+          flex={1}
+          direction="row"
+          alignItems="center"
+          gap={4}
+          flexWrap="wrap"
+        >
           <Logotipo />
 
           {!isMobile && (
@@ -62,7 +76,7 @@ function Menu() {
 
         <ThemeButton />
       </Stack>
-    </Box>
+    </Stack>
   );
 }
 
