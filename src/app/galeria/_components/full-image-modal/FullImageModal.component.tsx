@@ -106,6 +106,7 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
                   src={image.src}
                   effect="blur"
                   style={{
+                    display: 'flex',
                     width: 'auto',
                     maxWidth: '100%',
                     maxHeight: '90dvh',

@@ -1,7 +1,7 @@
-import type { Image } from '@/app/galeria/_components/image-gallery/ImageGallery.types';
+import type { GalleryImage } from '@/app/galeria/_components/image-gallery/ImageGallery.types';
 import { initialImages } from '@/shared/constants';
 
-export const getImages = (): Promise<Image[][]> =>
+export const getImages = (): Promise<GalleryImage[]> =>
   new Promise(resolve => {
     setTimeout(() => {
       resolve(initialImages);

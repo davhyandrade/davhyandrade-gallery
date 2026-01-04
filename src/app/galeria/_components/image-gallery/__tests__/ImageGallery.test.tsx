@@ -33,9 +33,18 @@ jest.mock('swiper/modules', () => ({
 }));
 
 const mockImages = [
-  [{ id: '1', src: 'https://example.com/img1.jpg', alt: 'test' }],
-  [{ id: '2', src: 'https://example.com/img2.jpg', alt: 'test' }],
-  [{ id: '3', src: 'https://example.com/img3.jpg', alt: 'test' }],
+  {
+    isHighlight: true,
+    images: [{ id: '1', src: 'https://example.com/img1.jpg', alt: 'test' }],
+  },
+  {
+    isHighlight: true,
+    images: [{ id: '2', src: 'https://example.com/img2.jpg', alt: 'test' }],
+  },
+  {
+    isHighlight: true,
+    images: [{ id: '3', src: 'https://example.com/img3.jpg', alt: 'test' }],
+  },
 ];
 
 it('renders all images', () => {
@@ -53,7 +62,7 @@ it('displays the full image in the modal when an image is clicked', () => {
 
   expect(screen.getByTestId('full-image')).toHaveAttribute(
     'src',
-    mockImages[0][0].src,
+    mockImages[0].images[0].src,
   );
 });
 

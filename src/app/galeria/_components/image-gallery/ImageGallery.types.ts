@@ -4,6 +4,11 @@ export type Image = {
   alt: string;
 };
 
+export interface GalleryImage {
+  isHighlight?: boolean;
+  images: Image[];
+}
+
 export interface ImageGalleryProps {
-  images: Image[][] | null;
+  images: GalleryImage[] | null;
 }
