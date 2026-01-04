@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Box } from '@mui/material';
+import Masonry from '@mui/lab/Masonry';
 
 import FullImageModal from '@/app/galeria/_components/full-image-modal/FullImageModal.component';
 import ImageGalleryItem from './image-gallery-item/ImageGalleryItem.component';
@@ -15,6 +16,22 @@ function ImageGallery({ images }: ImageGalleryProps) {
 
   return (
     <>
+      <Masonry columns={{ xs: 2, sm: 3 }} spacing={{ xs: 2, md: 6 }} sequential>
+        {images.map(({ images: img, isHighlight }) => {
+          if (!isHighlight) return null;
+
+          return (
+            <Box key={img[0].id}>
+              <ImageGalleryItem
+                image={img[0]}
+                hasMultipleImages={img.length > 1}
+                onClick={() => setSelectedImages(img)}
+              />
+            </Box>
+          );
+        })}
+      </Masonry>
+
       <Box
         id="image-gallery"
         sx={{
@@ -24,21 +41,25 @@ function ImageGallery({ images }: ImageGalleryProps) {
           columnGap: { xs: 2, md: 6 },
         }}
       >
-        {images.map(img => (
-          <Box
-            key={img[0].id}
-            sx={{
-              marginBottom: { xs: 2, md: 6 },
-              breakInside: 'avoid',
-            }}
-          >
-            <ImageGalleryItem
-              image={img[0]}
-              hasMultipleImages={img.length > 1}
-              onClick={() => setSelectedImages(img)}
-            />
-          </Box>
-        ))}
+        {images.map(({ images: img, isHighlight }) => {
+          if (isHighlight) return null;
+
+          return (
+            <Box
+              key={img[0].id}
+              sx={{
+                marginBottom: { xs: 2, md: 6 },
+                breakInside: 'avoid',
+              }}
+            >
+              <ImageGalleryItem
+                image={img[0]}
+                hasMultipleImages={img.length > 1}
+                onClick={() => setSelectedImages(img)}
+              />
+            </Box>
+          );
+        })}
       </Box>
 
       <FullImageModal
