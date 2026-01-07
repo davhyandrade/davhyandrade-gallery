@@ -2,6 +2,10 @@ import { styled } from '@mui/material/styles';
 import { Swiper as SwiperBase } from 'swiper/react';
 
 const Swiper = styled(SwiperBase)(({ theme }) => ({
+  '.swiper-wrapper': {
+    display: 'flex',
+    alignItems: 'center',
+  },
   '.swiper-button-next, .swiper-button-prev': {
     color: theme.palette.text.primary,
     width: 32,
