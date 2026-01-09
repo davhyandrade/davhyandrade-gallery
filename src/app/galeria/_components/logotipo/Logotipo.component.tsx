@@ -8,14 +8,28 @@ function Logotipo() {
         <CollectionsIcon color="primary" fontSize="small" />
       </Stack>
 
-      <Typography
-        component="h2"
-        fontSize={18}
-        color="text.title"
-        fontWeight={700}
-      >
-        Galeria
-      </Typography>
+      <Stack>
+        <Typography
+          component="h2"
+          fontSize={18}
+          color="text.title"
+          fontWeight={700}
+          lineHeight={1}
+        >
+          Galeria
+        </Typography>
+
+        <Typography
+          variant="body2"
+          color="primary.main"
+          fontFamily="var(--font-cookie)"
+          lineHeight={1}
+          fontWeight={600}
+          letterSpacing={1}
+        >
+          Davhy Andrade
+        </Typography>
+      </Stack>
     </Stack>
   );
 }
