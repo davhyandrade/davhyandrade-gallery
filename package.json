@@ -23,6 +23,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-lazy-load-image-component": "^1.6.3",
+    "react-responsive-masonry": "^2.7.1",
     "swiper": "^12.0.3"
   },
   "devDependencies": {
@@ -35,6 +36,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-lazy-load-image-component": "^1.6.4",
+    "@types/react-responsive-masonry": "^2.7.0",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
     "@typescript-eslint/parser": "^8.46.1",
     "eslint": "^9",
