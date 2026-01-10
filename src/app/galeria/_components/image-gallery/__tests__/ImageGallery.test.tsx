@@ -14,6 +14,16 @@ jest.mock('swiper/react', () => ({
   ),
 }));
 
+jest.mock('react-responsive-masonry', () => ({
+  __esModule: true,
+  default: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
+  ResponsiveMasonry: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
+}));
+
 jest.mock('swiper/modules', () => ({
   Pagination: {},
   Mousewheel: {},
