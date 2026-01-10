@@ -21,11 +21,13 @@ function Logotipo() {
 
         <Typography
           variant="body2"
-          color="primary.main"
           fontFamily="var(--font-cookie)"
           lineHeight={1}
           fontWeight={600}
           letterSpacing={1}
+           sx={{
+            color: { xs: 'text.primary', sm: 'primary.main' },
+          }}
         >
           Davhy Andrade
         </Typography>
