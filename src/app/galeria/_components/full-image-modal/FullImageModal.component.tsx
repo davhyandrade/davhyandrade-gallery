@@ -97,7 +97,10 @@ function FullImageModal({ isOpen, onClose, images }: FullImageModalProps) {
         >
           {images.map(image => (
             <SwiperSlide key={image.id} onClick={handleBackdropClick}>
-              <Stack className="swiper-zoom-container">
+              <Stack
+                className="swiper-zoom-container"
+                bgcolor="background.default"
+              >
                 <LazyLoadImage
                   data-testid="full-image"
                   src={image.src}
