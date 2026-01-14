@@ -2,21 +2,24 @@
 
 import { useState } from 'react';
 
-import { ButtonBase, Stack, Typography } from '@mui/material';
-import { alpha } from '@mui/material/styles';
+import { ButtonBase, Chip, Stack, Typography } from '@mui/material';
+import { alpha, useTheme } from '@mui/material/styles';
 import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import type { ImageGalleryItemProps } from './ImageGalleryItem.types';
+import { CATEGORY_LABEL } from '@/shared/constants';
 
 function ImageGalleryItem({
   image,
   hasMultipleImages = false,
+  category,
   ...restProps
 }: ImageGalleryItemProps) {
   const [loaded, setLoaded] = useState(false);
+  const theme = useTheme();
 
   return (
     <ButtonBase
@@ -67,6 +70,18 @@ function ImageGalleryItem({
               },
             }}
           >
+            <Chip
+              variant="filled"
+              color={theme.palette.mode === 'light' ? 'primary' : 'default'}
+              label={CATEGORY_LABEL[category]}
+              sx={{
+                position: 'absolute',
+                top: 8,
+                left: 8,
+                borderRadius: 3,
+              }}
+            />
+
             <OpenInFullRoundedIcon color="secondary" />
 
             <Typography variant="body2" color="text.primary" fontWeight={500}>
