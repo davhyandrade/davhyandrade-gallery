@@ -1,7 +1,8 @@
 import type { ButtonBaseProps } from '@mui/material';
-import type { Image } from '@/app/(galeria)/_components/image-gallery/ImageGallery.types';
+import type { Category, Image } from '@/shared/types/Image.types';
 
 export interface ImageGalleryItemProps extends ButtonBaseProps {
   image: Image;
   hasMultipleImages?: boolean;
+  category: Category;
 }

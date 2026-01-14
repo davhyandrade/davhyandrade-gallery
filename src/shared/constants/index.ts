@@ -1,8 +1,18 @@
+import { Category } from '@/shared/types/Image.types';
+
 export const MAIN_URL_BASE = 'https://davhyandrade.com.br/';
+
+export const CATEGORY_LABEL: Record<Category, string> = {
+  [Category.NATURE]: 'Natureza',
+  [Category.STREET_PHOTOGRAPHY]: 'Fotografia de Rua',
+  [Category.VEHICLE]: 'Veículo',
+  [Category.ESSAY]: 'Ensaio',
+};
 
 export const initialImages = [
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img4',
@@ -13,6 +23,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img5',
@@ -23,6 +34,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img6',
@@ -33,6 +45,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.ESSAY,
     images: [
       {
         id: 'img7',
@@ -43,6 +56,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img9',
@@ -53,6 +67,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img12',
@@ -63,6 +78,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img13',
@@ -73,6 +89,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img14',
@@ -83,6 +100,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img1',
@@ -103,6 +121,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img15',
@@ -113,6 +132,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img16',
@@ -123,6 +143,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img17',
@@ -133,6 +154,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img18',
@@ -143,6 +165,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img19',
@@ -153,6 +176,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img20',
@@ -168,6 +192,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img22',
@@ -178,6 +203,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img23',
@@ -188,6 +214,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img24',
@@ -198,6 +225,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img25',
@@ -208,6 +236,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img26',
@@ -218,6 +247,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img27',
@@ -228,6 +258,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img29',
@@ -238,6 +269,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img30',
@@ -248,6 +280,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img31',
@@ -258,6 +291,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img32',
@@ -268,6 +302,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img33',
@@ -278,6 +313,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img34',
@@ -288,6 +324,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img35',
@@ -298,6 +335,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img36',
@@ -308,6 +346,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img37',
@@ -318,6 +357,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img38',
@@ -328,6 +368,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img40',
@@ -338,6 +379,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img41',
@@ -348,6 +390,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img42',
@@ -358,6 +401,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img43',
@@ -368,6 +412,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img44',
@@ -378,6 +423,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img45',
@@ -388,6 +434,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img46',
@@ -398,6 +445,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img47',
@@ -408,6 +456,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img48',
@@ -418,6 +467,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img49',
@@ -428,6 +478,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img50',
@@ -438,6 +489,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img52',
@@ -448,6 +500,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img53',
@@ -458,6 +511,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img54',
@@ -468,6 +522,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img55',
@@ -478,6 +533,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img56',
@@ -488,6 +544,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img57',
@@ -498,6 +555,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img58',
@@ -508,6 +566,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img59',
@@ -518,6 +577,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.ESSAY,
     images: [
       {
         id: 'img60',
@@ -533,6 +593,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.ESSAY,
     images: [
       {
         id: 'img62',
@@ -543,6 +604,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.ESSAY,
     images: [
       {
         id: 'img63',
@@ -558,6 +620,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img65',
@@ -568,6 +631,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.ESSAY,
     images: [
       {
         id: 'img66',
@@ -578,6 +642,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img67',
@@ -593,6 +658,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img69',
@@ -603,6 +669,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.ESSAY,
     images: [
       {
         id: 'img70',
@@ -613,6 +680,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img71',
@@ -623,6 +691,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img72',
@@ -633,6 +702,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img73',
@@ -643,6 +713,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img74',
@@ -653,6 +724,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img75',
@@ -663,6 +735,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img76',
@@ -673,6 +746,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img77',
@@ -693,6 +767,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img80',
@@ -703,6 +778,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img81',
@@ -713,6 +789,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img82',
@@ -728,6 +805,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img84',
@@ -738,6 +816,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img85',
@@ -748,6 +827,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img86',
@@ -758,6 +838,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img87',
@@ -768,6 +849,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img88',
@@ -778,6 +860,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img89',
@@ -788,6 +871,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img90',
@@ -798,6 +882,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img91',
@@ -808,6 +893,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img92',
@@ -818,6 +904,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img93',
@@ -828,6 +915,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img94',
@@ -838,6 +926,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img95',
@@ -848,6 +937,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img97',
@@ -868,6 +958,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img102',
@@ -883,6 +974,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img104',
@@ -893,6 +985,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img105',
@@ -903,6 +996,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img106',
@@ -913,6 +1007,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
+    category: Category.NATURE,
     images: [
       {
         id: 'img107',
@@ -923,6 +1018,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img108',
@@ -933,6 +1029,7 @@ export const initialImages = [
   },
   {
     isHighlight: true,
+    category: Category.NATURE,
     images: [
       {
         id: 'img109',
