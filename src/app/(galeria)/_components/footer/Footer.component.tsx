@@ -1,6 +1,6 @@
 import { Button, Stack, Typography } from '@mui/material';
 
-import Logotipo from '@/app/galeria/_components/logotipo/Logotipo.component';
+import Logotipo from '@/app/(galeria)/_components/logotipo/Logotipo.component';
 
 import { MAIN_URL_BASE } from '@/shared/constants';
 

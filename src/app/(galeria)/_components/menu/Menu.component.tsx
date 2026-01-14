@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import Logotipo from '@/app/galeria/_components/logotipo/Logotipo.component';
+import Logotipo from '@/app/(galeria)/_components/logotipo/Logotipo.component';
 import { Button, Divider, Stack } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';

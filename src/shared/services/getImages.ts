@@ -1,4 +1,4 @@
-import type { GalleryImage } from '@/app/galeria/_components/image-gallery/ImageGallery.types';
+import type { GalleryImage } from '@/app/(galeria)/_components/image-gallery/ImageGallery.types';
 import { initialImages } from '@/shared/constants';
 
 export const getImages = (): Promise<GalleryImage[]> =>
