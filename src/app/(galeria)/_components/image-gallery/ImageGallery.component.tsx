@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import FullImageModal from '@/app/galeria/_components/full-image-modal/FullImageModal.component';
+import FullImageModal from '@/app/(galeria)/_components/full-image-modal/FullImageModal.component';
 import ImageGalleryItem from './image-gallery-item/ImageGalleryItem.component';
 
 import type { Image, ImageGalleryProps } from './ImageGallery.types';
