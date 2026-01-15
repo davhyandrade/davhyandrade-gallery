@@ -45,7 +45,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
-    category: Category.ESSAY,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img7',

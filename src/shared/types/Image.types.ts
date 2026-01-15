@@ -5,6 +5,12 @@ export enum Category {
   ESSAY = 'essay',
 }
 
+export type CategoryTypes =
+  | 'nature'
+  | 'street-photography'
+  | 'vehicle'
+  | 'essay';
+
 export type Image = {
   id: string;
   src: string;
