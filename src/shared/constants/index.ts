@@ -45,7 +45,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
-    category: Category.ESSAY,
+    category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
         id: 'img7',
@@ -67,7 +67,7 @@ export const initialImages = [
   },
   {
     isHighlight: false,
-    category: Category.STREET_PHOTOGRAPHY,
+    category: Category.VEHICLE,
     images: [
       {
         id: 'img12',
@@ -624,7 +624,7 @@ export const initialImages = [
     images: [
       {
         id: 'img65',
-        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1767362261/davhyandrade-gallery/_MG_6504_sata39.jpg',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768608648/davhyandrade-gallery/_MG_6504_npxvyz.jpg',
         alt: 'test',
       },
     ],
@@ -1034,6 +1034,184 @@ export const initialImages = [
       {
         id: 'img109',
         src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1767365673/davhyandrade-gallery/_MG_2629-2_hl7hnj.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.ESSAY,
+    images: [
+      {
+        id: 'img111',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606877/davhyandrade-gallery/_MG_7915_ushr9u.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img112',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606877/davhyandrade-gallery/_MG_7916_eup7fw.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.ESSAY,
+    images: [
+      {
+        id: 'img114',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606877/davhyandrade-gallery/_MG_7922-2_axbcii.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img115',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768683094/davhyandrade-gallery/_MG_7922_evvosy.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.ESSAY,
+    images: [
+      {
+        id: 'img116',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606881/davhyandrade-gallery/_MG_7958_dnrzkm.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img1171',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606878/davhyandrade-gallery/_MG_7958-2_phirto.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img117',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685612/davhyandrade-gallery/_MG_6998_wybwui.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img118',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685613/davhyandrade-gallery/_MG_7809_fwsk5u.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img119',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685614/davhyandrade-gallery/_MG_7813_k5mzek.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img120',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685613/davhyandrade-gallery/_MG_7076_x1tlis.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img121',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685614/davhyandrade-gallery/_MG_7072_feq9zg.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img121',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685613/davhyandrade-gallery/_MG_7748_huadgw.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img122',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685613/davhyandrade-gallery/_MG_7194_mushck.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img123',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685613/davhyandrade-gallery/_MG_7969_frhqr6.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img124',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685613/davhyandrade-gallery/_MG_7768_nhqfhz.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img125',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685614/davhyandrade-gallery/_MG_7891_mb9m3f.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img126',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685614/davhyandrade-gallery/_MG_6696_eumf1f.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.STREET_PHOTOGRAPHY,
+    images: [
+      {
+        id: 'img127',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685614/davhyandrade-gallery/_MG_7185_xxsoqq.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img128',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685614/davhyandrade-gallery/_MG_7188_ih87hn.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img129',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685614/davhyandrade-gallery/_MG_7189_svb5g6.jpg',
         alt: 'test',
       },
     ],
