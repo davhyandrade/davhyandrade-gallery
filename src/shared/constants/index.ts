@@ -1038,4 +1038,52 @@ export const initialImages = [
       },
     ],
   },
+  {
+    isHighlight: false,
+    category: Category.ESSAY,
+    images: [
+      {
+        id: 'img111',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606877/davhyandrade-gallery/_MG_7915_ushr9u.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img112',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606877/davhyandrade-gallery/_MG_7916_eup7fw.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.ESSAY,
+    images: [
+      {
+        id: 'img114',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606877/davhyandrade-gallery/_MG_7922-2_axbcii.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img115',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768608146/davhyandrade-gallery/_MG_7922_v9c9mw.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.ESSAY,
+    images: [
+      {
+        id: 'img116',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606881/davhyandrade-gallery/_MG_7958_dnrzkm.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img117',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768606878/davhyandrade-gallery/_MG_7958-2_phirto.jpg',
+        alt: 'test',
+      },
+    ],
+  },
 ];
