@@ -8,8 +8,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import FullImageModal from '@/app/(galeria)/_components/full-image-modal/FullImageModal.component';
 import ImageGalleryItem from './image-gallery-item/ImageGalleryItem.component';
+import ImagesFilterButton from './images-filter-button/ImagesFilterButton.component';
 
-import type { Image } from '@/shared/types/Image.types';
+import type { CategoryTypes, Image } from '@/shared/types/Image.types';
 
 import type { ImageGalleryProps } from './ImageGallery.types';
 import { CATEGORY_PRIORITY } from './ImageGallery.constants';
@@ -17,6 +18,9 @@ import { CATEGORY_PRIORITY } from './ImageGallery.constants';
 function ImageGallery({ images }: ImageGalleryProps) {
   const [showAllImages, setShowAllImages] = useState<boolean | null>(null);
   const [selectedImages, setSelectedImages] = useState<Image[] | null>(null);
+  const [selectedCategory, setSelectedCategory] =
+    useState<CategoryTypes | null>(null);
+
   const theme = useTheme();
 
   const handleShowAllImages = () => {
@@ -29,9 +33,13 @@ function ImageGallery({ images }: ImageGalleryProps) {
 
   if (!images) return null;
 
-  const visibleImages = images.filter(({ isHighlight }) =>
-    showAllImages ? true : isHighlight,
-  );
+  const visibleImages = images.filter(({ isHighlight, category }) => {
+    if (selectedCategory) return category === selectedCategory;
+
+    const highlightFilter = showAllImages ? true : isHighlight;
+
+    return highlightFilter;
+  });
 
   const orderedImages = [...visibleImages].sort((a, b) => {
     if (a.isHighlight !== b.isHighlight) {
@@ -44,6 +52,11 @@ function ImageGallery({ images }: ImageGalleryProps) {
   return (
     <>
       <Box id="image-gallery" padding={{ xs: 2, sm: 4 }}>
+        <ImagesFilterButton
+          setSelectedCategory={setSelectedCategory}
+          selectedCategory={selectedCategory}
+        />
+
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 0: 2, 600: 3 }}
           gutterBreakPoints={{
@@ -64,7 +77,7 @@ function ImageGallery({ images }: ImageGalleryProps) {
           </Masonry>
         </ResponsiveMasonry>
 
-        {!showAllImages && (
+        {!showAllImages && !selectedCategory && (
           <Stack
             direction="row"
             width="100%"

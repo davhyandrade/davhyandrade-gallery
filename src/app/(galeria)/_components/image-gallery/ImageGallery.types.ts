@@ -1,8 +1,8 @@
-import type { Category, Image } from "@/shared/types/Image.types";
+import type { CategoryTypes, Image } from '@/shared/types/Image.types';
 
 export interface GalleryImage {
   isHighlight?: boolean;
-  category: Category;
+  category: CategoryTypes;
   images: Image[];
 }
 
