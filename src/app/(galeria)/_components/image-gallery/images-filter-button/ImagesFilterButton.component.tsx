@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { IconButton, Tooltip } from '@mui/material';
 import FilterListRoundedIcon from '@mui/icons-material/FilterListRounded';
 
+import useClipboard from '@/shared/hooks/useClipboard.hooks';
 import { CategoryTypes } from '@/shared/types/Image.types';
 
 import ImagesFilterPanel from './images-filter-panel/ImagesFilterPanel.component';
@@ -20,6 +21,9 @@ function ImagesFilterButton({
     !!selectedCategory || false,
   );
   const { replace } = useRouter();
+  const { copy, isClipboardSupported } = useClipboard({
+    message: 'Link copiado com sucesso!',
+  });
 
   const handleClick = () => {
     if (isDrawerOpen) {
@@ -38,6 +42,12 @@ function ImagesFilterButton({
     }
 
     setSelectedCategory(category);
+  };
+
+  const handleShareButton = (category: CategoryTypes | null) => {
+    const categoryQueryParam = category ? `?category=${category}` : '';
+
+    copy(`${window.location}${categoryQueryParam}`);
   };
 
   return (
@@ -66,6 +76,8 @@ function ImagesFilterButton({
         selectedCategory={selectedCategory}
         onCategoryClick={handleCategory}
         onCloseClick={handleClick}
+        onShareClick={handleShareButton}
+        isClipboardSupported={isClipboardSupported}
       />
     </>
   );

@@ -1,5 +1,6 @@
 import { Chip, Divider, Drawer, IconButton, Stack } from '@mui/material';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 
 import { CATEGORY_LABEL } from '@/shared/constants';
 import { CategoryTypes } from '@/shared/types/Image.types';
@@ -11,6 +12,8 @@ function ImagesFilterPanel({
   selectedCategory,
   onCategoryClick,
   onCloseClick,
+  onShareClick,
+  isClipboardSupported,
 }: ImagesFilterPanelProps) {
   const actionSize = { xs: 36, sm: 32 };
 
@@ -82,6 +85,19 @@ function ImagesFilterPanel({
         <Divider orientation="vertical" flexItem />
 
         <Stack direction="row" alignItems="center" spacing={2}>
+          {isClipboardSupported && (
+            <IconButton
+              onClick={() => onShareClick(selectedCategory)}
+              sx={{
+                width: actionSize,
+                height: actionSize,
+                fontSize: 18,
+              }}
+            >
+              <ShareRoundedIcon fontSize="inherit" />
+            </IconButton>
+          )}
+
           <IconButton
             onClick={onCloseClick}
             sx={{
