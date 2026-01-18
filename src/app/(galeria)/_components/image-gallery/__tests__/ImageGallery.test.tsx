@@ -1,5 +1,16 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+import { GalleryImage } from '../ImageGallery.types';
 import ImageGallery from '../ImageGallery.component';
+
+jest.mock('next/navigation', () => ({
+  ...jest.requireActual('next/navigation'),
+  useSearchParams: jest.fn().mockReturnValue({
+    get: jest.fn().mockReturnValue(null),
+  }),
+  useRouter: jest.fn().mockReturnValue({
+    replace: jest.fn(),
+  }),
+}));
 
 jest.mock('@mui/material/useMediaQuery', () =>
   jest.fn().mockReturnValue(false),
@@ -32,17 +43,20 @@ jest.mock('swiper/modules', () => ({
   Navigation: {},
 }));
 
-const mockImages = [
+const mockImages: GalleryImage[] = [
   {
     isHighlight: true,
+    category: 'nature',
     images: [{ id: '1', src: 'https://example.com/img1.jpg', alt: 'test' }],
   },
   {
     isHighlight: true,
+    category: 'nature',
     images: [{ id: '2', src: 'https://example.com/img2.jpg', alt: 'test' }],
   },
   {
     isHighlight: true,
+    category: 'nature',
     images: [{ id: '3', src: 'https://example.com/img3.jpg', alt: 'test' }],
   },
 ];
