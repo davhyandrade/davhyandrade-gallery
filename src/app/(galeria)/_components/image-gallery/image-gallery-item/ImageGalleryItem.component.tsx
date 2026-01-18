@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import { ButtonBase, Chip, Stack, Typography } from '@mui/material';
 import { alpha, useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 
@@ -19,6 +20,7 @@ function ImageGalleryItem({
   ...restProps
 }: ImageGalleryItemProps) {
   const [loaded, setLoaded] = useState(false);
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down('sm'));
   const theme = useTheme();
 
   return (
@@ -70,17 +72,19 @@ function ImageGalleryItem({
               },
             }}
           >
-            <Chip
-              variant="filled"
-              color={theme.palette.mode === 'light' ? 'primary' : 'default'}
-              label={CATEGORY_LABEL[category]}
-              sx={{
-                position: 'absolute',
-                top: 8,
-                left: 8,
-                borderRadius: 3,
-              }}
-            />
+            {!isMobile && (
+              <Chip
+                variant="filled"
+                color={theme.palette.mode === 'light' ? 'primary' : 'default'}
+                label={CATEGORY_LABEL[category]}
+                sx={{
+                  position: 'absolute',
+                  top: 8,
+                  left: 8,
+                  borderRadius: 3,
+                }}
+              />
+            )}
 
             <OpenInFullRoundedIcon color="secondary" />
 
