@@ -11,6 +11,16 @@ jest.mock('next/navigation', () => ({
   }),
 }));
 
+const mockCopy = jest.fn();
+
+jest.mock('@/shared/hooks/use-clipboard/useClipboard.hooks', () => ({
+  __esModule: true,
+  default: () => ({
+    copy: mockCopy,
+    isClipboardSupported: true,
+  }),
+}));
+
 const defaultProps = {
   selectedCategory: null,
   setSelectedCategory,
@@ -70,4 +80,12 @@ it('clears category when clicking the same category again', () => {
   fireEvent.click(screen.getByText('Natureza'));
 
   expect(setSelectedCategory).toHaveBeenCalledWith(null);
+});
+
+it('calls copy function when clicking share button', () => {
+  render(<ImagesFilterButton {...defaultProps} selectedCategory="nature" />);
+
+  fireEvent.click(screen.getByTestId('share-button'));
+
+  expect(mockCopy).toHaveBeenCalledWith('http://localhost?category=nature');
 });
