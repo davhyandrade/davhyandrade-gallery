@@ -5,4 +5,6 @@ export interface ImagesFilterPanelProps {
   selectedCategory: CategoryTypes | null;
   onCategoryClick: (key: CategoryTypes) => void;
   onCloseClick: () => void;
+  onShareClick: (category: CategoryTypes | null) => void;
+  isClipboardSupported: boolean;
 }
