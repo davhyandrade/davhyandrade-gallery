@@ -576,7 +576,7 @@ export const initialImages = [
     ],
   },
   {
-    isHighlight: false,
+    isHighlight: true,
     category: Category.ESSAY,
     images: [
       {
@@ -603,7 +603,7 @@ export const initialImages = [
     ],
   },
   {
-    isHighlight: false,
+    isHighlight: true,
     category: Category.ESSAY,
     images: [
       {
@@ -1212,6 +1212,123 @@ export const initialImages = [
       {
         id: 'img129',
         src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1768685614/davhyandrade-gallery/_MG_7189_svb5g6.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.NATURE,
+    images: [
+      {
+        id: 'img130',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986706/davhyandrade-gallery/_MG_7277_asrwxv.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img131',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986707/davhyandrade-gallery/_MG_7279_ixz8yw.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.NATURE,
+    images: [
+      {
+        id: 'img132',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986707/davhyandrade-gallery/_MG_7335_tztbxn.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img133',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986707/davhyandrade-gallery/_MG_7337_nfw3hh.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.NATURE,
+    images: [
+      {
+        id: 'img134',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986708/davhyandrade-gallery/_MG_7389_f1psbl.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img135',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986707/davhyandrade-gallery/_MG_7385_lpybrr.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img136',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986707/davhyandrade-gallery/_MG_7386_fzzn4i.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.NATURE,
+    images: [
+      {
+        id: 'img137',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986709/davhyandrade-gallery/_MG_7557_qfkavq.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img138',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986708/davhyandrade-gallery/_MG_7550_tuktxx.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img139',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986708/davhyandrade-gallery/_MG_7545_clkmaf.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img140',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986708/davhyandrade-gallery/_MG_7547_bqtdzt.jpg',
+        alt: 'test',
+      },
+      {
+        id: 'img141',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986708/davhyandrade-gallery/_MG_7542_hvctut.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.NATURE,
+    images: [
+      {
+        id: 'img142',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986708/davhyandrade-gallery/_MG_7537_vyjngz.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.NATURE,
+    images: [
+      {
+        id: 'img143',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986709/davhyandrade-gallery/_MG_7665_cfv7n6.jpg',
+        alt: 'test',
+      },
+    ],
+  },
+  {
+    isHighlight: false,
+    category: Category.NATURE,
+    images: [
+      {
+        id: 'img144',
+        src: 'https://res.cloudinary.com/dbsebu2ef/image/upload/v1769986710/davhyandrade-gallery/_MG_8022_fedqxo.jpg',
         alt: 'test',
       },
     ],
