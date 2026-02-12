@@ -804,7 +804,7 @@ export const initialImages = [
     ],
   },
   {
-    isHighlight: false,
+    isHighlight: true,
     category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
@@ -1114,7 +1114,7 @@ export const initialImages = [
     ],
   },
   {
-    isHighlight: false,
+    isHighlight: true,
     category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
@@ -1130,7 +1130,7 @@ export const initialImages = [
     ],
   },
   {
-    isHighlight: false,
+    isHighlight: true,
     category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
@@ -1185,7 +1185,7 @@ export const initialImages = [
     ],
   },
   {
-    isHighlight: false,
+    isHighlight: true,
     category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
@@ -1196,7 +1196,7 @@ export const initialImages = [
     ],
   },
   {
-    isHighlight: false,
+    isHighlight: true,
     category: Category.STREET_PHOTOGRAPHY,
     images: [
       {
